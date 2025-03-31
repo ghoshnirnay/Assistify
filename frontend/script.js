@@ -162,34 +162,50 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-// Get modal element
-const modal = document.getElementById("loginModal");
-// Get button that opens the modal
-const btn = document.getElementById("loginButton");
-// Get the <span> element that closes the modal
-const span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+// Modal functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const loginModal = document.getElementById('loginModal');
+    const signupModal = document.getElementById('signupModal');
+    const loginButton = document.getElementById('loginButton');
+    const signupButton = document.getElementById('signupButton');
+    
+    // Get all close buttons
+    const closeButtons = document.querySelectorAll('.modal-close, .modal-overlay');
+  
+    // Open modal functions
+    function openModal(modal) {
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
     }
-}
-
-// Handle form submission
-document.getElementById("loginForm").onsubmit = function(e) {
-    e.preventDefault();
-    // Handle login logic here (e.g., validation or API call)
-    console.log("Login submitted");
-    modal.style.display = "none"; // Close modal after submission
-}
+  
+    // Close modal function
+    function closeModal(modal) {
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  
+    // Event listeners for opening modals
+    if (loginButton) {
+      loginButton.addEventListener('click', () => openModal(loginModal));
+    }
+    
+    if (signupButton) {
+      signupButton.addEventListener('click', () => openModal(signupModal));
+    }
+  
+    // Event listeners for closing modals
+    closeButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const modal = this.closest('.modal');
+        closeModal(modal);
+      });
+    });
+  
+    // Close modal when pressing Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const openModal = document.querySelector('.modal[aria-hidden="false"]');
+        if (openModal) closeModal(openModal);
+      }
+    });
+  });
