@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign up for Assistify - AI-powered adaptive learning platform">
+    <title>Sign Up | Assistify</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header role="banner" class="header">
+        <div class="container">
+            <a href="#main" class="skip-link">Skip to main content</a>
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="logo.png" alt="Assistify Logo" class="logo" width="880" height="860">
+                </a>
+            </div>
+            <nav role="navigation" aria-label="Main navigation" class="nav">
+                <button class="menu-toggle" aria-expanded="false" aria-label="Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html#features" class="nav-link">Features</a></li>
+                    <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+                    <li><a href="index.html#accessibility" class="nav-link">Accessibility</a></li>
+                    <li><a href="index.html#testimonials" class="nav-link">Testimonials</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-secondary" aria-label="Sign in">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main" role="main" class="signup-main">
+        <section class="signup-hero">
+            <div class="container">
+                <div class="signup-content">
+                    <h1 class="signup-title">Create Your <span class="highlight">Free Account</span></h1>
+                    <p class="signup-subtitle">Join thousands of learners experiencing personalized, accessible education</p>
+                    
+                    <form class="signup-form" id="signup-form">
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="full-name" required aria-required="true" placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required aria-required="true" placeholder="Enter your email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="password" name="password" required aria-required="true" placeholder="Create a password">
+                                <button type="button" class="toggle-password" aria-label="Show password">
+                                    <span class="icon-eye" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <div class="password-strength"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="user-type">I am a:</label>
+                            <select id="user-type" name="user-type" aria-label="Select user type">
+                                <option value="student">Student</option>
+                                <option value="teacher">Educator</option>
+                                <option value="parent">Parent</option>
+                                <option value="professional">Professional Learner</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required aria-required="true">
+                            <label for="terms">I agree to Assistify's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Send me product updates and learning tips</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large" aria-label="Create account">Create Account</button>
+                        
+                        <div class="signup-divider">
+                            <span>or</span>
+                        </div>
+                        
+                        <div class="social-signup">
+                            <button type="button" class="btn btn-social google" aria-label="Sign up with Google">
+                                <span class="icon-google" aria-hidden="true"></span>
+                                Continue with Google
+                            </button>
+                            <button type="button" class="btn btn-social microsoft" aria-label="Sign up with Microsoft">
+                                <span class="icon-microsoft" aria-hidden="true"></span>
+                                Continue with Microsoft
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <p class="login-redirect">Already have an account? <a href="login.html">Sign in</a></p>
+                </div>
+                
+                <div class="signup-benefits">
+                    <h3 class="benefits-title">Why Join Assistify?</h3>
+                    <ul class="benefits-list">
+                        <li class="benefit-item">
+                            <span class="icon-check" aria-hidden="true"></span>
+                            <span>AI-powered personalized learning</span>
+                        </li>
+                        <li class="benefit-item">
+                            <span class="icon-check" aria-hidden="true"></span>
+                            <span>Fully accessible platform</span>
+                        </li>
+                        <li class="benefit-item">
+                            <span class="icon-check" aria-hidden="true"></span>
+                            <span>Gamified educational experience</span>
+                        </li>
+                        <li class="benefit-item">
+                            <span class="icon-check" aria-hidden="true"></span>
+                            <span>Progress tracking & analytics</span>
+                        </li>
+                        <li class="benefit-item">
+                            <span class="icon-check" aria-hidden="true"></span>
+                            <span>Multi-modal interaction options</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="accessibility-notice">
+                        <h4>Accessibility Support</h4>
+                        <p>Need help signing up? Our <a href="#">accessibility guide</a> provides alternative signup methods including voice registration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer role="contentinfo" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="logo.png" alt="Assistify Logo" class="footer-logo" width="160" height="50">
+                    <p class="footer-description">AI-powered, gamified educational platform designed with adaptive and inclusive principles for all learners.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <span class="icon-facebook" aria-hidden="true"></span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <span class="icon-twitter" aria-hidden="true"></span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <span class="icon-linkedin" aria-hidden="true"></span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <span class="icon-youtube" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Product</h3>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Features</a></li>
+                        <li><a href="#" class="footer-link">Pricing</a></li>
+                        <li><a href="#" class="footer-link">Case Studies</a></li>
+                        <li><a href="#" class="footer-link">Updates</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Company</h3>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Careers</a></li>
+                        <li><a href="#" class="footer-link">Accessibility</a></li>
+                        <li><a href="#" class="footer-link">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Support</h3>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+                        <li><a href="#" class="footer-link">Accessibility Guide</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                        <li><a href="#" class="footer-link">Feedback</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3 class="footer-heading">Stay Updated</h3>
+                    <form class="newsletter-form">
+                        <label for="email" class="visually-hidden">Email address</label>
+                        <div class="input-group">
+                            <input type="email" id="email" placeholder="Your email" class="newsletter-input" required>
+                            <button type="submit" class="newsletter-button" aria-label="Subscribe to newsletter">
+                                <span class="icon-send" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </form>
+                    <p class="footer-small">Get the latest on inclusive education and product updates.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <a href="#" class="legal-link">Terms of Service</a>
+                    <a href="#" class="legal-link">Accessibility Statement</a>
+                    <a href="#" class="legal-link">Cookie Policy</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; <span id="year">2023</span> Assistify. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="accessibility-toolbar">
+        <button class="accessibility-button" aria-label="Open accessibility toolbar">
+            <span class="icon-accessibility" aria-hidden="true"></span>
+        </button>
+        <div class="accessibility-panel" aria-hidden="true">
+            <h3 class="panel-title">Accessibility Options</h3>
+            <div class="panel-options">
+                <div class="option-group">
+                    <label for="text-size">Text Size</label>
+                    <select id="text-size" class="accessibility-select">
+                        <option value="100%">Default</option>
+                        <option value="125%">Large</option>
+                        <option value="150%">Larger</option>
+                        <option value="175%">Extra Large</option>
+                        <option value="200%">Huge</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label for="color-scheme">Color Scheme</label>
+                    <select id="color-scheme" class="accessibility-select">
+                        <option value="default">Default</option>
+                        <option value="high-contrast">High Contrast</option>
+                        <option value="dark-mode">Dark Mode</option>
+                        <option value="light-mode">Light Mode</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label for="font-style">Font Style</label>
+                    <select id="font-style" class="accessibility-select">
+                        <option value="default">Default</option>
+                        <option value="dyslexia">Dyslexia-Friendly</option>
+                        <option value="sans-serif">Simple Sans-Serif</option>
+                    </select>
+                </div>
+                <button class="btn btn-small reset-accessibility" aria-label="Reset all accessibility settings">Reset All</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
