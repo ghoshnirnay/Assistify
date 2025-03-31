@@ -350,6 +350,7 @@ p {
 .how-it-works {
     padding: 5rem 0;
     text-align: center;
+     font-size: 1.5rem;
     background-color: var(--background-light);
 }
 
@@ -359,13 +360,15 @@ p {
     gap: 2rem;
     max-width: 100%;
     width: 100%;
-    margin: 0 auto 3rem;
+    margin: 0 auto 3rem;  
+    padding-left: 200px;
+    padding-right: 200px;
 }
 
 .step {
     display: flex;
     text-align: center;
-    gap: 2rem;
+    gap: -1rem;
     align-items: flex-start;
 }
 
