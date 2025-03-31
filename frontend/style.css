@@ -38,6 +38,8 @@ body {
     background-color: var(--background);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 150;
 }
 
 /* Typography */
@@ -70,7 +72,7 @@ p {
 /* Utility Classes */
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
@@ -167,7 +169,7 @@ p {
 }
 
 .logo {
-    height: 40px;
+    height: 100px;
     width: auto;
 }
 
@@ -206,7 +208,7 @@ p {
     width: 25px;
     height: 3px;
     background-color: var(--text-color);
-    margin: 5px 0;
+    margin: 0 0;
     transition: var(--transition);
 }
 
@@ -347,6 +349,7 @@ p {
 /* How It Works */
 .how-it-works {
     padding: 5rem 0;
+    text-align: center;
     background-color: var(--background-light);
 }
 
@@ -354,18 +357,21 @@ p {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    max-width: 800px;
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto 3rem;
 }
 
 .step {
     display: flex;
+    text-align: center;
     gap: 2rem;
     align-items: flex-start;
 }
 
 .step-number {
     flex-shrink: 0;
+    text-align: center;
     width: 40px;
     height: 40px;
     background-color: var(--primary-color);
