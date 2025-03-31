@@ -31,7 +31,22 @@
                 </ul>
             </nav>
             <div class="header-actions">
-                <a href="login.html"><button class="btn btn-secondary" aria-label="Sign in">Sign In</button></a>
+                <!-- Login Button -->
+                    <button id="loginButton" class="btn btn-secondary" aria-label="Sign in">Sign In</button>
+                    
+                    <!-- Login Modal -->
+                    <div id="loginModal" class="modal">
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Login</h2>
+                        <form id="loginForm">
+                          <input type="text" id="username" placeholder="Username" required>
+                          <input type="password" id="password" placeholder="Password" required>
+                          <button type="submit">Log In</button>
+                        </form>
+                      </div>
+                    </div>
+                    </button>
             </div>
         </div>
     </header>
