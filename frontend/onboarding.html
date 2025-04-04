@@ -1,0 +1,99 @@
+<!-- New onboarding.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalize Your Experience | Assistify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="onboarding-page">
+    <header class="onboarding-header">
+        <div class="container">
+            <img src="logo.png" alt="Assistify Logo" width="120">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 0%"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="onboarding-steps">
+        <form id="onboardingForm" class="container">
+            <!-- Step 1: Learning Profile -->
+            <div class="onboarding-step active" data-step="1">
+                <h2>Let's personalize your experience</h2>
+                <p class="subtitle">This helps our AI adapt to your unique learning style</p>
+                
+                <div class="form-group">
+                    <label>What best describes you?</label>
+                    <div class="option-grid">
+                        <label class="option-card">
+                            <input type="radio" name="user-type" value="student" required>
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Student</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="user-type" value="professional">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Professional</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="user-type" value="educator">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Educator</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="user-type" value="lifelong-learner">
+                            <i class="fas fa-seedling"></i>
+                            <span>Lifelong Learner</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-primary next-step">Continue</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Learning Preferences -->
+            <div class="onboarding-step" data-step="2">
+                <h2>How do you learn best?</h2>
+                <p class="subtitle">Select all that apply (helps us format content)</p>
+                
+                <div class="preference-grid">
+                    <label class="preference-card">
+                        <input type="checkbox" name="learning-pref" value="visual">
+                        <div class="preference-content">
+                            <i class="fas fa-eye"></i>
+                            <h3>Visual</h3>
+                            <p>Diagrams, charts, and videos</p>
+                        </div>
+                    </label>
+                    <!-- Repeat for auditory, reading/writing, kinesthetic -->
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-text prev-step">Back</button>
+                    <button type="button" class="btn btn-primary next-step">Continue</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Goals -->
+            <div class="onboarding-step" data-step="3">
+                <h2>What are your goals?</h2>
+                <div class="form-group">
+                    <textarea name="learning-goals" class="input-area" 
+                              placeholder="Example: I want to learn Python for data analysis within 3 months"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-text prev-step">Back</button>
+                    <button type="submit" class="btn btn-primary">Finish Setup</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <script src="onboarding.js"></script>
+</body>
+</html>

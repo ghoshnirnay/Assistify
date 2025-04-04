@@ -1180,3 +1180,94 @@ body.dyslexia-mode {
     --primary-light: #9162E4;
     --primary-dark: #280680;
 }
+/* Onboarding Page Styles */
+.onboarding-page {
+    background-color: var(--background-light);
+    min-height: 100vh;
+}
+
+.onboarding-header {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--background-dark);
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+}
+
+.progress-bar {
+    height: 6px;
+    background: var(--background-dark);
+    border-radius: 3px;
+    margin-top: 1rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.onboarding-steps {
+    padding: 3rem 0;
+}
+
+.onboarding-step {
+    display: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.onboarding-step.active {
+    display: block;
+}
+
+.subtitle {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.option-card {
+    border: 2px solid var(--background-dark);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.option-card:hover {
+    border-color: var(--primary-light);
+}
+
+.option-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.option-card input:checked + span {
+    border-color: var(--primary-color);
+    background: rgba(94, 53, 177, 0.1);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .option-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
