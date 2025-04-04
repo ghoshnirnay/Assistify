@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Assistify - AI-powered virtual assistant with gamified educational platform designed for inclusivity">
+    <meta name="description"
+        content="Assistify - AI-powered virtual assistant with gamified educational platform designed for inclusivity">
     <title>Assistify | Inclusive AI Learning Assistant</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <header role="banner" class="header">
         <div class="container">
@@ -31,97 +34,107 @@
                 </ul>
             </nav>
             <!-- In your header section -->
-<div class="header-actions">
-    <!-- Login Button -->
-    <button id="loginButton" class="btn btn-secondary" aria-label="Sign in">Sign In</button>
-    
-    <!-- SignUp Button -->
-    <button id="signupButton" class="btn btn-primary" aria-label="Sign up">Sign Up</button>
-</div>
+            <div class="header-actions">
+                <!-- Login Button -->
+                <button id="loginButton" class="btn btn-secondary" aria-label="Sign in">Sign In</button>
+
+                <!-- SignUp Button -->
+                <button id="signupButton" class="btn btn-primary" aria-label="Sign up">Sign Up</button>
+            </div>
 
 
-<div id="loginModal" class="modal" aria-hidden="true" role="dialog">
-    <div class="modal-overlay" tabindex="-1">
-        <div class="modal-container" role="document">
-            <button class="modal-close" aria-label="Close modal">
-                <i class="fas fa-times"></i> <!-- Font Awesome close icon -->
-            </button>
-            <h2 class="modal-title">Login to Assistify</h2>
-            <form id="loginForm" class="modal-form">
-                <div class="form-group">
-                    <label for="login-email">Email</label>
-                    <input type="email" id="login-email" required placeholder="your@email.com">
-                </div>
-                <div class="form-group">
-                    <label for="login-password">Password</label>
-                    <div class="password-wrapper">
-                        <input type="password" id="login-password" required placeholder="••••••••">
-                        <button type="button" class="toggle-password" aria-label="Show password">
-                            <i class="fas fa-eye"></i>
+            <div id="loginModal" class="modal" aria-hidden="true" role="dialog">
+                <div class="modal-overlay" tabindex="-1">
+                    <div class="modal-container" role="document">
+                        <button class="modal-close" aria-label="Close modal">
+                            <i class="fas fa-times"></i> <!-- Font Awesome close icon -->
                         </button>
+                        <h2 class="modal-title">Login to Assistify</h2>
+                        <form id="loginForm" class="modal-form">
+                            <div class="form-group">
+                                <!-- <label for="login-email">Email</label> -->
+                                <input type="email" id="login-email" required class="input-area" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="login-password">Password</label> -->
+                                <div class="password-wrapper">
+                                    <input type="password" id="login-password" required class="input-area"
+                                        placeholder="Password">
+                                    <button type="button" class="toggle-password" aria-label="Show password">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="forgot-password">
+                                <a href="#" id="forgotPassword" class="">Forgot Password?</a>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Log In</button>
+                                <hr class="divider">
+                                <div class="social-login">
+                                    <p style="margin-bottom: 0rem;">Or log in with:</p>
+                                    <button type="button" class="btn btn-social google">
+                                        <i class="fab fa-google"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-social microsoft">
+                                        <i class="fab fa-microsoft"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="modal-footer">Don't have an account? <a href="#" id="switchToSignup">Sign up</a>
+                            </p>
+                        </form>
                     </div>
                 </div>
-                <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">Log In</button>
-                    <div class="social-login">
-                        <p>Or log in with:</p>
-                        <button type="button" class="btn btn-social google">
-                            <i class="fab fa-google"></i> Google
-                        </button>
-                        <button type="button" class="btn btn-social microsoft">
-                            <i class="fab fa-microsoft"></i> Microsoft
-                        </button>
-                    </div>
-                </div>
-                <p class="modal-footer">Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
-            </form>
-        </div>
-    </div>
-</div>
+            </div>
 
-<div id="signupModal" class="modal" aria-hidden="true" role="dialog">
-    <div class="modal-overlay" tabindex="-1">
-        <div class="modal-container" role="document">
-            <button class="modal-close" aria-label="Close modal">
-                <i class="fas fa-times"></i> <!-- Font Awesome close icon -->
-            </button>
-            <h2 class="modal-title">Create Your Account</h2>
-            <form id="signupForm" class="modal-form">
-                <div class="form-group">
-                    <label for="signup-name">Full Name</label>
-                    <input type="text" id="signup-name" required placeholder="Your name">
-                </div>
-                <div class="form-group">
-                    <label for="signup-email">Email</label>
-                    <input type="email" id="signup-email" required placeholder="your@email.com">
-                </div>
-                <div class="form-group">
-                    <label for="signup-password">Password</label>
-                    <div class="password-wrapper">
-                        <input type="password" id="signup-password" required placeholder="••••••••">
-                        <button type="button" class="toggle-password" aria-label="Show password">
-                            <i class="fas fa-eye"></i>
+            <div id="signupModal" class="modal" aria-hidden="true" role="dialog">
+                <div class="modal-overlay" tabindex="-1">
+                    <div class="modal-container" role="document">
+                        <button class="modal-close" aria-label="Close modal">
+                            <i class="fas fa-times"></i> <!-- Font Awesome close icon -->
                         </button>
+                        <h2 class="modal-title">Create Your Account</h2>
+                        <form id="signupForm" class="modal-form">
+                            <div class="form-group">
+                                <!-- <label for="signup-name">Full Name</label> -->
+                                <input type="text" id="signup-name" class="input-area" placeholder="Full Name">
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="signup-email">Email</label> -->
+                                <input type="email" id="signup-email" required class="input-area"
+                                    placeholder="Email Address">
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="signup-password">Password</label> -->
+                                <div class="password-wrapper">
+                                    <input type="password" id="signup-password" required class="input-area"
+                                        placeholder="Password">
+                                    <button type="button" class="toggle-password" aria-label="Show password">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="password-strength">
+                                    <div class="strength-bar"></div>
+                                    <span class="strength-text">Password strength: <span>Weak</span></span>
+                                </div>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="terms" required>
+                                <label for="terms">I agree to the <a href="#">Terms</a> and <a href="#">Privacy
+                                        Policy</a></label>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="newsletter">
+                                <label for="newsletter">Subscribe to our newsletter</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create Account</button>
+                            <p class="modal-footer">Already have an account? <a href="#" id="switchToLogin">Log in</a>
+                            </p>
+                        </form>
                     </div>
-                    <div class="password-strength">
-                        <div class="strength-bar"></div>
-                        <span class="strength-text">Password strength: <span>Weak</span></span>
-                    </div>
                 </div>
-                <div class="form-group checkbox-group">
-                    <input type="checkbox" id="terms" required>
-                    <label for="terms">I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a></label>
-                </div>
-                <div class="form-group checkbox-group">
-                    <input type="checkbox" id="newsletter">
-                    <label for="newsletter">Subscribe to our newsletter</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Create Account</button>
-                <p class="modal-footer">Already have an account? <a href="#" id="switchToLogin">Log in</a></p>
-            </form>
-        </div>
-    </div>
-</div>
+            </div>
     </header>
 
     <main id="main" role="main">
@@ -129,9 +142,11 @@
             <div class="container">
                 <div class="hero-content">
                     <h1 class="hero-title">Learning for <span class="highlight">Everyone</span></h1>
-                    <p class="hero-subtitle">An AI-powered, gamified educational platform designed with adaptive and inclusive principles</p>
+                    <p class="hero-subtitle">An AI-powered, gamified educational platform designed with adaptive and
+                        inclusive principles</p>
                     <div class="hero-actions">
-                        <button class="btn btn-primary btn-large" aria-label="Try Assistify for free">Try for Free</button>
+                        <button class="btn btn-primary btn-large" aria-label="Try Assistify for free">Try for
+                            Free</button>
                         <button class="btn btn-text" aria-label="Watch demo video">
                             <span class="icon-play" aria-hidden="true"></span> Watch Demo
                         </button>
@@ -152,13 +167,15 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="image1.jpg" alt="Diverse group of people using Assistify on different devices" width="600" height="500">
+                    <img src="image1.jpg" alt="Diverse group of people using Assistify on different devices" width="600"
+                        height="500">
                 </div>
             </div>
         </section>
 
         <section id="features" class="features" aria-labelledby="features-heading">
-            <h2 id="features-heading" class="section-title">Designed for <span class="highlight">All Learners</span></h2>
+            <h2 id="features-heading" class="section-title">Designed for <span class="highlight">All Learners</span>
+            </h2>
             <p class="section-subtitle">Assistify adapts to your unique learning style and needs</p>
             <div class="container">
                 <div class="features-grid">
@@ -167,47 +184,53 @@
                             <img src="ai.jpg" alt="" width="158" height="108">
                         </div>
                         <h3 class="feature-title">AI-Powered Assistance</h3>
-                        <p class="feature-description">Our virtual assistant provides real-time support tailored to your learning pace and preferences.</p>
+                        <p class="feature-description">Our virtual assistant provides real-time support tailored to your
+                            learning pace and preferences.</p>
                     </div>
-                    
+
                     <div class="feature-card">
                         <div class="feature-icon" aria-hidden="true">
                             <img src="game.jpg" alt="" width="188" height="108">
                         </div>
                         <h3 class="feature-title">Gamified Learning</h3>
-                        <p class="feature-description">Earn points, badges, and level up as you learn, making education engaging and fun.</p>
+                        <p class="feature-description">Earn points, badges, and level up as you learn, making education
+                            engaging and fun.</p>
                     </div>
-                    
+
                     <div class="feature-card">
                         <div class="feature-icon" aria-hidden="true">
                             <img src="icon-accessibility.svg" alt="" width="48" height="48">
                         </div>
                         <h3 class="feature-title">Fully Accessible</h3>
-                        <p class="feature-description">Screen reader compatible, keyboard navigable, and customizable interface for all abilities.</p>
+                        <p class="feature-description">Screen reader compatible, keyboard navigable, and customizable
+                            interface for all abilities.</p>
                     </div>
-                    
+
                     <div class="feature-card">
                         <div class="feature-icon" aria-hidden="true">
                             <img src="icon-adaptive.svg" alt="" width="48" height="48">
                         </div>
                         <h3 class="feature-title">Adaptive Content</h3>
-                        <p class="feature-description">Content adjusts in real-time based on your progress, strengths, and areas needing improvement.</p>
+                        <p class="feature-description">Content adjusts in real-time based on your progress, strengths,
+                            and areas needing improvement.</p>
                     </div>
-                    
+
                     <div class="feature-card">
                         <div class="feature-icon" aria-hidden="true">
                             <img src="20945529.jpg" alt="" width="150" height="150">
                         </div>
                         <h3 class="feature-title">Multi-Modal Input</h3>
-                        <p class="feature-description">Interact via voice, text, or gesture - choose what works best for you.</p>
+                        <p class="feature-description">Interact via voice, text, or gesture - choose what works best for
+                            you.</p>
                     </div>
-                    
+
                     <div class="feature-card">
                         <div class="feature-icon" aria-hidden="true">
                             <img src="progress.jpg" alt="" width="150" height="120">
                         </div>
                         <h3 class="feature-title">Progress Tracking</h3>
-                        <p class="feature-description">Detailed analytics help you and your educators track and celebrate your learning journey.</p>
+                        <p class="feature-description">Detailed analytics help you and your educators track and
+                            celebrate your learning journey.</p>
                     </div>
                 </div>
             </div>
@@ -215,44 +238,48 @@
 
         <section id="how-it-works" class="how-it-works" aria-labelledby="how-it-works-heading">
             <h2 id="how-it-works-heading" class="section-title">How <span class="highlight">Assistify</span> Works</h2>
-            <div class="container">
-                
+            <div class="container how-it-works-container">
+
                 <p class="section-subtitle">A seamless learning experience tailored to you</p>
-                
+
                 <div class="steps">
                     <div class="step">
                         <div class="step-number" aria-hidden="true">1</div>
                         <div class="step-content">
                             <h3 class="step-title">Personalized Assessment</h3>
-                            <p class="step-description">Our AI evaluates your learning style, preferences, and accessibility needs to create your unique profile.</p>
+                            <p class="step-description">Our AI evaluates your learning style, preferences, and
+                                accessibility needs to create your unique profile.</p>
                         </div>
                     </div>
-                    
+
                     <div class="step">
                         <div class="step-number" aria-hidden="true">2</div>
                         <div class="step-content">
                             <h3 class="step-title">Adaptive Learning Path</h3>
-                            <p class="step-description">Based on your assessment, we generate a customized learning journey with interactive content.</p>
+                            <p class="step-description">Based on your assessment, we generate a customized learning
+                                journey with interactive content.</p>
                         </div>
                     </div>
-                    
+
                     <div class="step">
                         <div class="step-number" aria-hidden="true">3</div>
                         <div class="step-content">
                             <h3 class="step-title">Gamified Engagement</h3>
-                            <p class="step-description">Earn rewards, complete challenges, and track progress through our engaging game mechanics.</p>
+                            <p class="step-description">Earn rewards, complete challenges, and track progress through
+                                our engaging game mechanics.</p>
                         </div>
                     </div>
-                    
+
                     <div class="step">
                         <div class="step-number" aria-hidden="true">4</div>
                         <div class="step-content">
                             <h3 class="step-title">Continuous Adaptation</h3>
-                            <p class="step-description">The system constantly adjusts based on your performance and feedback for optimal learning.</p>
+                            <p class="step-description">The system constantly adjusts based on your performance and
+                                feedback for optimal learning.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="demo-video">
                     <button class="video-thumbnail" aria-label="Play Assistify demo video">
                         <img src="video-thumbnail.jpg" alt="" width="800" height="450">
@@ -263,7 +290,8 @@
         </section>
 
         <section id="accessibility" class="accessibility" aria-labelledby="accessibility-heading">
-            <h2 id="accessibility-heading" class="section-title">Built with <span class="highlight">Inclusivity</span> in Mind</h2>
+            <h2 id="accessibility-heading" class="section-title">Built with <span class="highlight">Inclusivity</span>
+                in Mind</h2>
             <p class="section-subtitle">Accessibility features that empower all learners</p>
             <div class="container">
                 <div class="accessibility-features">
@@ -278,7 +306,8 @@
                                 <span class="icon-contrast" aria-hidden="true"></span>
                                 <span>Contrast</span>
                             </button>
-                            <button class="control-option" aria-pressed="false" aria-label="Enable dyslexia-friendly font">
+                            <button class="control-option" aria-pressed="false"
+                                aria-label="Enable dyslexia-friendly font">
                                 <span class="icon-dyslexia" aria-hidden="true"></span>
                                 <span>Dyslexia Mode</span>
                             </button>
@@ -288,7 +317,7 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <div class="accessibility-list">
                         <ul class="feature-list">
                             <li class="feature-item">
@@ -332,15 +361,18 @@
         <section id="testimonials" class="testimonials" aria-labelledby="testimonials-heading">
             <h2 id="testimonials-heading" class="section-title">What Our <span class="highlight">Users</span> Say</h2>
             <div class="container">
-                
+
                 <p class="section-subtitle">Stories from our diverse learning community</p>
-                
+
                 <div class="testimonial-carousel">
                     <div class="testimonial active" aria-hidden="false">
                         <div class="testimonial-content">
-                            <p class="testimonial-text">"As a visually impaired student, I've struggled to find educational platforms that work for me. Assistify's screen reader compatibility and audio descriptions have been game-changing for my learning."</p>
+                            <p class="testimonial-text">"As a visually impaired student, I've struggled to find
+                                educational platforms that work for me. Assistify's screen reader compatibility and
+                                audio descriptions have been game-changing for my learning."</p>
                             <div class="testimonial-author">
-                                <img src="user1.jpg" alt="Portrait of Sarah J." class="author-image" width="80" height="80">
+                                <img src="user1.jpg" alt="Portrait of Sarah J." class="author-image" width="80"
+                                    height="80">
                                 <div class="author-info">
                                     <p class="author-name">Sarah J.</p>
                                     <p class="author-title">College Student</p>
@@ -348,12 +380,15 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="testimonial" aria-hidden="true">
                         <div class="testimonial-content">
-                            <p class="testimonial-text">"The gamification elements keep my ADHD son engaged in learning like nothing else has. The reward system and interactive challenges perfectly match how his brain works."</p>
+                            <p class="testimonial-text">"The gamification elements keep my ADHD son engaged in learning
+                                like nothing else has. The reward system and interactive challenges perfectly match how
+                                his brain works."</p>
                             <div class="testimonial-author">
-                                <img src="user2.jpg" alt="Portrait of Michael T." class="author-image" width="80" height="80">
+                                <img src="user2.jpg" alt="Portrait of Michael T." class="author-image" width="80"
+                                    height="80">
                                 <div class="author-info">
                                     <p class="author-name">Michael T.</p>
                                     <p class="author-title">Parent</p>
@@ -361,12 +396,15 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="testimonial" aria-hidden="true">
                         <div class="testimonial-content">
-                            <p class="testimonial-text">"I teach a diverse classroom with varying abilities. Assistify lets me create lessons that automatically adapt to each student's needs, saving me hours of customization."</p>
+                            <p class="testimonial-text">"I teach a diverse classroom with varying abilities. Assistify
+                                lets me create lessons that automatically adapt to each student's needs, saving me hours
+                                of customization."</p>
                             <div class="testimonial-author">
-                                <img src="user3.jpg" alt="Portrait of Dr. Lisa M." class="author-image" width="80" height="80">
+                                <img src="user3.jpg" alt="Portrait of Dr. Lisa M." class="author-image" width="80"
+                                    height="80">
                                 <div class="author-info">
                                     <p class="author-name">Dr. Lisa M.</p>
                                     <p class="author-title">Special Education Teacher</p>
@@ -374,7 +412,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="carousel-controls">
                         <button class="carousel-prev" aria-label="Previous testimonial">
                             <span class="icon-arrow-left" aria-hidden="true"></span>
@@ -394,10 +432,12 @@
 
         <section class="cta" aria-labelledby="cta-heading">
             <div class="container">
-                <h2 id="cta-heading" class="cta-title">Ready to Experience <span class="highlight">Inclusive Learning</span>?</h2>
+                <h2 id="cta-heading" class="cta-title">Ready to Experience <span class="highlight">Inclusive
+                        Learning</span>?</h2>
                 <p class="cta-subtitle">Join thousands of learners who are achieving their goals with Assistify</p>
                 <div class="cta-actions">
-                    <button class="btn btn-primary btn-large" aria-label="Get started with Assistify">Get Started</button>
+                    <button class="btn btn-primary btn-large" aria-label="Get started with Assistify">Get
+                        Started</button>
                     <button class="btn btn-secondary btn-large" aria-label="Contact our team">Contact Us</button>
                 </div>
             </div>
@@ -409,7 +449,8 @@
             <div class="footer-grid">
                 <div class="footer-about">
                     <img src="logo.png" alt="Assistify Logo" class="footer-logo" width="160" height="50">
-                    <p class="footer-description">AI-powered, gamified educational platform designed with adaptive and inclusive principles for all learners.</p>
+                    <p class="footer-description">AI-powered, gamified educational platform designed with adaptive and
+                        inclusive principles for all learners.</p>
                     <div class="social-links">
                         <a href="#" class="social-link" aria-label="Facebook">
                             <i class="fab fa-facebook-f" aria-hidden="true"></i>
@@ -425,7 +466,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="footer-links">
                     <h3 class="footer-heading">Product</h3>
                     <ul class="footer-list">
@@ -435,7 +476,7 @@
                         <li><a href="#" class="footer-link">Updates</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-links">
                     <h3 class="footer-heading">Company</h3>
                     <ul class="footer-list">
@@ -445,7 +486,7 @@
                         <li><a href="#" class="footer-link">Blog</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-links">
                     <h3 class="footer-heading">Support</h3>
                     <ul class="footer-list">
@@ -455,7 +496,7 @@
                         <li><a href="#" class="footer-link">Feedback</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-newsletter">
                     <h3 class="footer-heading">Stay Updated</h3>
                     <form class="newsletter-form">
@@ -470,7 +511,7 @@
                     <p class="footer-small">Get the latest on inclusive education and product updates.</p>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <div class="footer-legal">
                     <a href="#" class="legal-link">Privacy Policy</a>
@@ -519,9 +560,11 @@
                         <option value="sans-serif">Simple Sans-Serif</option>
                     </select>
                 </div>
-                <button class="btn btn-small reset-accessibility" aria-label="Reset all accessibility settings">Reset All</button>
+                <button class="btn btn-small reset-accessibility" aria-label="Reset all accessibility settings">Reset
+                    All</button>
             </div>
         </div>
     </div>
 </body>
+
 </html>

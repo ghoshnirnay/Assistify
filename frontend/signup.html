@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
+    <!-- Metadata and external resources -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sign up for Assistify - AI-powered adaptive learning platform">
@@ -10,12 +11,16 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Header section with navigation and actions -->
     <header role="banner" class="header">
         <div class="container">
+            <!-- Skip link for accessibility -->
             <a href="#main" class="skip-link">Skip to main content</a>
+            <!-- Logo -->
             <div class="logo-container">
                 <img src="logo.png" alt="Assistify Logo" class="logo" width="880" height="860">
             </div>
+            <!-- Navigation menu -->
             <nav role="navigation" aria-label="Main navigation" class="nav">
                 <button class="menu-toggle" aria-expanded="false" aria-label="Menu">
                     <span class="bar"></span>
@@ -23,6 +28,7 @@
                     <span class="bar"></span>
                 </button>
                 <ul class="nav-list">
+                    <!-- Navigation links -->
                     <li><a href="#features" class="nav-link">Features</a></li>
                     <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
                     <li><a href="#accessibility" class="nav-link">Accessibility</a></li>
@@ -30,6 +36,7 @@
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
+            <!-- Header action buttons -->
             <div class="header-actions">
                 <button class="btn btn-secondary" aria-label="Sign in">Sign In</button>
                 <button class="btn btn-primary" aria-label="Get started">Get Started</button>
@@ -37,26 +44,32 @@
         </div>
     </header>
 
+    <!-- Main content section -->
     <main id="main" role="main" class="signup-main">
         <section class="signup-hero">
             <div class="container">
                 <div class="signup-content">
+                    <!-- Signup form introduction -->
                     <h1 class="signup-title">Create Your <span class="highlight">Free Account</span></h1>
                     <p class="signup-subtitle">Join thousands of learners experiencing personalized, accessible education</p>
                     
+                    <!-- Signup form -->
                     <form class="signup-form" id="signup-form">
+                        <!-- Full name input -->
                         <div class="form-group">
-                            <label for="full-name">Full Name</label>
-                            <input type="text" id="full-name" name="full-name" required aria-required="true" placeholder="Enter your full name">
+                            <!-- <label for="full-name">Full Name</label> -->
+                            <input type="text" id="full-name" name="full-name" required aria-required="true" placeholder="Full Name">
                         </div>
                         
+                        <!-- Email input -->
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required aria-required="true" placeholder="Enter your email">
+                            <!-- <label for="email">Email Address</label> -->
+                            <input type="email" id="email" name="email" required aria-required="true" placeholder="Email">
                         </div>
                         
+                        <!-- Password input with toggle visibility -->
                         <div class="form-group">
-                            <label for="password">Password</label>
+                            <!-- <label for="password">Password</label> -->
                             <div class="password-wrapper">
                                 <input type="password" id="password" name="password" required aria-required="true" placeholder="Create a password">
                                 <button type="button" class="toggle-password" aria-label="Show password">
@@ -66,6 +79,7 @@
                             <div class="password-strength"></div>
                         </div>
                         
+                        <!-- User type selection -->
                         <div class="form-group">
                             <label for="user-type">I am a:</label>
                             <select id="user-type" name="user-type" aria-label="Select user type">
@@ -75,22 +89,27 @@
                             </select>
                         </div>
                         
+                        <!-- Terms and conditions checkbox -->
                         <div class="form-group checkbox-group">
                             <input type="checkbox" id="terms" name="terms" required aria-required="true">
                             <label for="terms">I agree to Assistify's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
                         </div>
                         
+                        <!-- Newsletter subscription checkbox -->
                         <div class="form-group checkbox-group">
                             <input type="checkbox" id="newsletter" name="newsletter">
                             <label for="newsletter">Send me product updates and learning tips</label>
                         </div>
                         
+                        <!-- Submit button -->
                         <button type="submit" class="btn btn-primary btn-large" aria-label="Create account">Create Account</button>
                         
+                        <!-- Divider for alternative signup methods -->
                         <div class="signup-divider">
                             <span>or</span>
                         </div>
                         
+                        <!-- Social signup buttons -->
                         <div class="social-signup">
                             <button type="button" class="btn btn-social google" aria-label="Sign up with Google">
                                 <span class="icon-google" aria-hidden="true"></span>
@@ -103,12 +122,15 @@
                         </div>
                     </form>
                     
+                    <!-- Redirect to login page -->
                     <p class="login-redirect">Already have an account? <a href="login.html">Sign in</a></p>
                 </div>
                 
+                <!-- Benefits of joining Assistify -->
                 <div class="signup-benefits">
                     <h3 class="benefits-title">Why Join Assistify?</h3>
                     <ul class="benefits-list">
+                        <!-- List of benefits -->
                         <li class="benefit-item">
                             <span class="icon-check" aria-hidden="true"></span>
                             <span>AI-powered personalized learning</span>
@@ -131,6 +153,7 @@
                         </li>
                     </ul>
                     
+                    <!-- Accessibility notice -->
                     <div class="accessibility-notice">
                         <h4>Accessibility Support</h4>
                         <p>Need help signing up? Our <a href="#">accessibility guide</a> provides alternative signup methods including voice registration.</p>
@@ -139,9 +162,11 @@
             </div>
         </section>
     </main>
+    <!-- Footer section -->
     <footer role="contentinfo" class="footer">
         <div class="container">
             <div class="footer-grid">
+                <!-- About Assistify -->
                 <div class="footer-about">
                     <img src="logo.png" alt="Assistify Logo" class="footer-logo" width="160" height="50">
                     <p class="footer-description">AI-powered, gamified educational platform designed with adaptive and inclusive principles for all learners.</p>
@@ -161,6 +186,7 @@
                     </div>
                 </div>
                 
+                <!-- Product links -->
                 <div class="footer-links">
                     <h3 class="footer-heading">Product</h3>
                     <ul class="footer-list">
@@ -171,6 +197,7 @@
                     </ul>
                 </div>
                 
+                <!-- Company links -->
                 <div class="footer-links">
                     <h3 class="footer-heading">Company</h3>
                     <ul class="footer-list">
@@ -181,6 +208,7 @@
                     </ul>
                 </div>
                 
+                <!-- Support links -->
                 <div class="footer-links">
                     <h3 class="footer-heading">Support</h3>
                     <ul class="footer-list">
@@ -191,6 +219,7 @@
                     </ul>
                 </div>
                 
+                <!-- Newsletter subscription -->
                 <div class="footer-newsletter">
                     <h3 class="footer-heading">Stay Updated</h3>
                     <form class="newsletter-form">
@@ -206,6 +235,7 @@
                 </div>
             </div>
             
+            <!-- Footer legal links and copyright -->
             <div class="footer-bottom">
                 <div class="footer-legal">
                     <a href="#" class="legal-link">Privacy Policy</a>
@@ -219,6 +249,7 @@
             </div>
         </div>
     </footer>
+    <!-- Accessibility toolbar -->
     <div class="accessibility-toolbar">
         <button class="accessibility-button" aria-label="Open accessibility toolbar">
             <span class="icon-accessibility" aria-hidden="true"></span>
@@ -226,6 +257,7 @@
         <div class="accessibility-panel" aria-hidden="true">
             <h3 class="panel-title">Accessibility Options</h3>
             <div class="panel-options">
+                <!-- Text size options -->
                 <div class="option-group">
                     <label for="text-size">Text Size</label>
                     <select id="text-size" class="accessibility-select">
@@ -236,6 +268,7 @@
                         <option value="200%">Huge</option>
                     </select>
                 </div>
+                <!-- Color scheme options -->
                 <div class="option-group">
                     <label for="color-scheme">Color Scheme</label>
                     <select id="color-scheme" class="accessibility-select">
@@ -245,6 +278,7 @@
                         <option value="light-mode">Light Mode</option>
                     </select>
                 </div>
+                <!-- Font style options -->
                 <div class="option-group">
                     <label for="font-style">Font Style</label>
                     <select id="font-style" class="accessibility-select">
@@ -253,6 +287,7 @@
                         <option value="sans-serif">Simple Sans-Serif</option>
                     </select>
                 </div>
+                <!-- Reset accessibility settings -->
                 <button class="btn btn-small reset-accessibility" aria-label="Reset all accessibility settings">Reset All</button>
             </div>
         </div>
