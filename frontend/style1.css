@@ -39,7 +39,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
-    padding-top: 150px;
+    padding: 150;
 }
 
 /* Typography */
@@ -75,16 +75,6 @@ p {
     max-width: 1800px;
     margin: 0 auto;
     padding: 0 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* justify-content: space-between; */
-}
-
-.how-it-works-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .visually-hidden {
@@ -111,31 +101,6 @@ p {
     cursor: pointer;
     transition: var(--transition);
     border: 2px solid transparent;
-}
-
-.btn-social {
-    background-color: var(--background-light);
-    color: var(--text-color);
-    padding: 0.5rem;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--box-shadow);
-}
-.btn-social:hover {
-    background-color: var(--primary-light);
-    transform: translateY(-2px);
-}
-
-.btn-social i{
-    font-size: 1.5rem;
-    color: var(--text-color);
-}
-.btn-social:hover i {
-    color: white;
 }
 
 .btn-primary {
@@ -350,11 +315,9 @@ p {
 }
 
 .features-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
 .feature-card {
@@ -363,8 +326,6 @@ p {
     padding: 2rem;
     box-shadow: var(--box-shadow);
     transition: var(--transition);
-    height: 30rem;
-    width: 30rem;
 }
 
 .feature-card:hover {
@@ -698,12 +659,7 @@ p {
 .cta .btn-secondary:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
-.social-login {
-    display: flex;
-    gap: 1rem;
-    flex-direction: row;
-    align-items: center;
-}
+
 /* Footer */
 .footer {
     background-color: var(--text-color);
@@ -1060,7 +1016,6 @@ body.dyslexia-mode {
     --primary-light: #CF9EFF;
     --primary-dark: #9B51E0;
 }
-
 /* Modal Styles */
 .modal {
     position: fixed;
@@ -1088,7 +1043,7 @@ body.dyslexia-mode {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0,0,0,0.5);
 }
 
 .modal-container {
@@ -1101,7 +1056,6 @@ body.dyslexia-mode {
     max-height: 90vh;
     overflow-y: auto;
     z-index: 10001;
-    margin: 12% auto;
 }
 
 .modal-close {
@@ -1118,57 +1072,24 @@ body.dyslexia-mode {
 .modal-title {
     margin-bottom: 1.5rem;
     color: var(--primary-color);
-    text-align: center;
 }
 
 .modal-form {
     display: flex;
     flex-direction: column;
-    gap: 0.9rem;
-    align-items: center;
+    gap: 1.5rem;
 }
 
-.form-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.modal-footer {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--text-light);
 }
 
-.divider {
-    visibility: visible;
-    width: 100%;
-    height: 1px;
-    background-color: var(--background-dark);
-    margin: 1.5rem 0;
+.modal-footer a {
+    color: var(--primary-color);
+    font-weight: 600;
 }
-
-.input-area  {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border-radius: var(--border-radius);
-    border: 1px solid var(--background-dark);
-    box-sizing: border-box;
-}
-
-.password-wrapper {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    margin-left: 5%;
-}
-
-.password-wrapper input {
-    flex: 1; /* Ensure the input takes up available space */
-}
-
-.password-strength {
-    text-align: center; /* Centers the text horizontally */
-    margin-top: 0.5rem; /* Adds some spacing above the text */
-    font-size: 0.9rem; /* Optional: Adjust font size if needed */
-    color: var(--text-light); /* Optional: Use a lighter text color */
-}
-
 /* Light mode */
 .light-mode {
     --text-color: #2D3748;
